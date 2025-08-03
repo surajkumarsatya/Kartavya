@@ -2,9 +2,11 @@ import PricingCard from "../../components/PricingCard/PricingCard"
 
 const Pricing = () => {
     return(
-        <div>
-            <PricingCard />
-        </div>
+        <section id="pricing" className="scroll-mt-20">
+            <div className="max-w-screen-xl m-auto xl:px-20">
+                <PricingCard />
+            </div>
+        </section>
     )
 }
 

@@ -12,7 +12,7 @@ const Hero = () => {
 
     <section className="max-w-screen-xl m-auto xl:px-0">
      
-      <div className="relative rounded-full h-[100%]  bg-[linear-gradient(90deg,#CDEFFB_0%,#FFFFFF_33.23%,#FFFFFF_65.77%,#FDEECB_100%)] 
+      <div className="relative rounded-full h-[100%] bg-[linear-gradient(90deg,#CDEFFB_0%,#FFFFFF_33.23%,#FFFFFF_65.77%,#FDEECB_100%)] 
         before:top-0">
         <div className="absolute bg-transparent backdrop-blur-[70px] w-full h-full"></div>
         <div

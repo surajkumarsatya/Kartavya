@@ -9,7 +9,7 @@ import { FaPlus } from "react-icons/fa";
 const Stats = () => {
   return (
     <section>
-      <div className="">
+      <div id="aboutus" >
         <div className="flex flex-col h-full bg-white items-center justify-center gap-10 lg:py-20 md:px-8 lg:px-16 xl:px-10 max-w-screen-xl m-auto">
         <div className=" mx-auto text-center font-semibold lg:px-[0vw]">
             <Heading

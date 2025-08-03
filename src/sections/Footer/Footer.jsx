@@ -42,10 +42,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex justify-between w-[64%]">
-            <ul className="text-sm flex flex-col gap-2">
+          <div className="flex justify-between w-[64%] cursor-pointer">
+            <ul className="text-sm flex flex-col gap-2 ">
               <li className="font-semibold">Sitemap</li>
-              <div className="text-zinc-600 flex flex-col gap-2">
+              <div className="text-zinc-600 flex flex-col gap-2 ">
                 <li>Contact Us</li>
                 <li>About Us</li>
                 <li>Work</li>

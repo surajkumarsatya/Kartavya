@@ -3,7 +3,7 @@ import TeamMemberCards from "../../components/TeamMemberCards/TeamMemberCards";
 
 const TeamMembers = () => {
   return (
-    <section>
+    <section id="team" className="scroll-mt-20">
       <div className="xl:px-20 max-w-screen-xl m-auto">
         <div className="mx-auto text-center xl:w-[50%]">
           <Heading
@@ -20,6 +20,7 @@ const TeamMembers = () => {
                 profile={team.profile}
                 twitter={team.twitter}
                 linkedIn={team.linkedIn}
+                key={team.id}
               />
             );
           })}

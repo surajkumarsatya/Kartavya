@@ -6,9 +6,9 @@ const Project = ({ imgUrl, projectName, tags }) => {
       <img src={imgUrl} className="w-fit rounded-xl" />
       <div className="text-xl">{projectName}</div>
      <div className="flex gap-3">
-       {tags.map((tag) => {
+       {tags.map((tag, key) => {
          return(
-          <Tags bgColor={"bg-white"} tags={tag} fontColor={"text-zinc-500"} />
+          <Tags bgColor={"bg-white"} tags={tag} fontColor={"text-zinc-500"} key={key}/>
          )
       })}
      </div>

@@ -3,7 +3,7 @@ import AwardCards from "../../components/AwardCards/AwardCards";
 
 const Awards = () => {
   return (
-    <section>
+    <section id="awards" className="scroll-mt-20">
       <div className="max-w-screen-xl m-auto xl:px-20 xl:pb-20">
         <div className="xl:pb-20 w-[70%] m-auto">
           <Heading
@@ -19,6 +19,7 @@ const Awards = () => {
                 awardName={award.awardName}
                 desc={award.desc}
                 year={award.year}
+                key={award.id}
               />
             );
           })}

@@ -17,6 +17,7 @@ const FAQ = () => {
                 ans={item.ans}
                 plusIcon={<BiPlus />}
                 minusIcon={<BiMinus />}
+                key={item.id}
               />
             );
           })}

@@ -1,7 +1,14 @@
+import Heading from "../../components/Heading/Heading";
+
 const Customers = () => {
   return (
     <section>
-      <div className="grid grid-cols-3 grid-rows-2 gap-4 h-270 max-w-screen-xl m-auto xl:px-20 xl:py-20">
+    <div className="max-w-screen-xl m-auto xl:px-20 xl:py-20">
+        <div className="w-[60%] mx-auto pb-20">
+            <Heading normal={'What our satisfied customers are saying'} italic={' about us'}/>
+        </div>
+      
+      <div className="grid grid-cols-3 grid-rows-2 gap-4 h-270">
         <div
           className="col-span-2 row-span-1 bg-[url('https://www.kartavya.io/images/home/customerStories/customer_bg_img.jpg')]
        h-[100%] bg-cover rounded-3xl"
@@ -76,6 +83,7 @@ const Customers = () => {
           </div>
         </div>
       </div>
+    </div>
     </section>
   );
 };

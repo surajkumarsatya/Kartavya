@@ -6,8 +6,9 @@ import { BsArrowUpRightCircleFill } from "react-icons/bs";
 
 const Offers = () => {
   return (
-    <section>
-      <div className="flex flex-col gap-20 items-center xl:px-20 max-w-screen-xl m-auto">
+    <section id="service" className="scroll-mt-20">
+     <div className="xl:px-20 max-w-screen-xl xl:pb-20 m-auto">
+         <div className="flex flex-col gap-20 items-center ">
         <div className="mx-auto text-center xl:w-[40%]">
           <Heading normal={"Where innovation meets"} italic={" aesthetics"} />
         </div>
@@ -50,6 +51,7 @@ const Offers = () => {
           </div>
         </div>
       </div>
+     </div>
     </section>
   );
 };

@@ -6,8 +6,7 @@ import Heading from "../Heading/Heading";
 
 const PricingCard = () => {
   return (
-    <section>
-      <div className="max-w-screen-xl m-auto xl:px-20">
+      <div>
         <div className="w-[40%] m-auto pb-20">
           <Heading
             normal={"Pick the plan that fits your"}
@@ -109,7 +108,6 @@ const PricingCard = () => {
           </div>
         </div>
       </div>
-    </section>
   );
 };
 

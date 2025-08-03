@@ -15,7 +15,7 @@ import Footer from "../../sections/Footer/Footer"
 const Home = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <Stats />
       <Offers />
@@ -26,7 +26,7 @@ const Home = () => {
       <FAQs />
       <Awards />
       <CTA />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

@@ -3,8 +3,8 @@ import Project from "../../components/Project/Project";
 
 const Works = () => {
   return (
-    <section>
-      <div className="xl:px-20 xl:py-20 max-w-screen-xl m-auto">
+    <section id="work" className="scroll-mt-20">
+      <div className="xl:px-20 xl:pb-20 max-w-screen-xl m-auto">
         <Heading normal={"Proof of"} italic={" Work"} />
         <div className="grid grid-cols-2 xl:gap-5 pt-20">
           {projectDetails.map((details) => {
@@ -12,7 +12,8 @@ const Works = () => {
               <Project
                 imgUrl={details.imgUrl}
                 projectName={details.projectName}
-                tags={details.tags}    
+                tags={details.tags} 
+                key={details.id}   
               />
             );
           })}
@@ -50,7 +51,7 @@ const projectDetails = [
   },
 
   {
-    id: 3,
+    id: 4,
     imgUrl:
       "https://www.kartavya.io/images/home/onlinePresence/online_img_4.jpg",
     projectName: "Hotto",
