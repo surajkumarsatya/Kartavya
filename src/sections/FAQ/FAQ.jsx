@@ -5,8 +5,8 @@ import Heading from "../../components/Heading/Heading";
 const FAQ = () => {
   return (
     <section>
-      <div className="max-w-screen-xl m-auto xl:px-20 xl:py-20">
-        <div className="xl:pb-20 w-[40%] m-auto">
+      <div className="max-w-screen-xl m-auto xl:px-20 pt-20 pb-18 p-4">
+        <div className="pb-20 xl:w-[40%] m-auto">
           <Heading normal={"Got questions? We've got"} italic={" answers"} />
         </div>
         <div>
@@ -56,7 +56,7 @@ const faq = [
 
   {
     id: 5,
-    ques: "Do you offer post-launch support and maintenance services?",
+    ques: "Do you offer post-launch support services?",
     ans: "Yes, we provide post-launch support to ensure smooth implementation and offer ongoing maintenance packages for clients needing regular updates or technical assistance.",
   },
 

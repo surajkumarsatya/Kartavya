@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
     <footer>
-      <div className="max-w-screen-xl m-auto xl:px-20 xl:py-20 ">
-        <div className="flex justify-between">
-          <div className="w-[32%]">
+      <div className="max-w-screen-xl m-auto xl:px-20 pb-20 px-4">
+        <div className="xl:flex justify-between grid gap-8">
+          <div className="xl:w-[32%]">
             <ul className="text-sm flex flex-col gap-5">
               <li>
                 <img
@@ -42,10 +42,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex justify-between w-[64%] cursor-pointer">
-            <ul className="text-sm flex flex-col gap-2 ">
+          <div className="xl:flex justify-between w-[64%] cursor-pointer grid gap-7">
+            <ul className="text-sm flex flex-col gap-4 ">
               <li className="font-semibold">Sitemap</li>
-              <div className="text-zinc-600 flex flex-col gap-2 ">
+              <div className="text-zinc-600 flex flex-col gap-4 ">
                 <li>Contact Us</li>
                 <li>About Us</li>
                 <li>Work</li>
@@ -54,17 +54,17 @@ const Footer = () => {
               </div>
             </ul>
 
-            <ul className="text-sm flex flex-col gap-2">
+            <ul className="text-sm flex flex-col gap-4">
               <li className="font-semibold">Other Pages</li>
-              <div className="text-zinc-600 flex flex-col gap-2">
+              <div className="text-zinc-600 flex flex-col gap-4">
                 <li>Terms & Conditions</li>
                 <li>Privacy Policy</li>
               </div>
             </ul>
 
-            <ul className="text-sm flex flex-col gap-2">
+            <ul className="text-sm flex flex-col gap-4">
               <li className="font-semibold">Contact Details</li>
-              <div className="text-zinc-600 flex flex-col gap-2">
+              <div className="text-zinc-600 flex flex-col gap-4">
                 <li>
                   71-75 Shelton Street, Covent Garden, <br /> London, United Kingdom.
                 </li>

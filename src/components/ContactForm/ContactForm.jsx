@@ -9,8 +9,8 @@ const ContactForm = () => {
         before:top-0"
     >
       <div className="absolute bg-transparent backdrop-blur-[70px] w-full h-full"></div>
-      <div className="relative flex flex-col h-fit items-center justify-center ">
-        <div className="m-auto pb-20 w-[40%]">
+      <div className="relative flex flex-col h-fit items-center justify-center px-4 py-20 xl:p-0">
+        <div className="m-auto pb-10 xl:w-[40%] p-2">
           <Heading normal={"Love to hear from you, Get in"} italic={" touch"} />
         </div>
 

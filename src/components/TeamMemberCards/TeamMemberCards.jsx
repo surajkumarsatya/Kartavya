@@ -3,8 +3,8 @@ import { BsLinkedin, BsTwitterX } from "react-icons/bs";
 
 const TeamMemberCards = ({name, profile, imgUrl, twitter, linkedIn}) => {
   return (
-    <div className="flex flex-col gap-4 items-center justify-center pt-20 text-center">
-      <img className="w-60" src={imgUrl}></img>
+    <div className="flex flex-col gap-4 items-center justify-center pt-20 text-center text-xl xl:text-xl">
+      <img className="xl:w-60" src={imgUrl}></img>
       <div>
         <div className="text-black font-semibold">{name}</div>
         <div className="text-zinc-500">{profile}</div>

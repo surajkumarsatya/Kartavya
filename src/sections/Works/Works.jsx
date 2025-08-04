@@ -4,9 +4,9 @@ import Project from "../../components/Project/Project";
 const Works = () => {
   return (
     <section id="work" className="scroll-mt-20">
-      <div className="xl:px-20 xl:pb-20 max-w-screen-xl m-auto">
+      <div className="p-4 pb-20 xl:px-20 xl:pb-20 max-w-screen-xl m-auto">
         <Heading normal={"Proof of"} italic={" Work"} />
-        <div className="grid grid-cols-2 xl:gap-5 pt-20">
+        <div className="grid gap-5 xl:grid xl:grid-cols-2 xl:gap-5 pt-20">
           {projectDetails.map((details) => {
             return (
               <Project

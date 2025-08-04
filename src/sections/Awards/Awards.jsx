@@ -4,14 +4,14 @@ import AwardCards from "../../components/AwardCards/AwardCards";
 const Awards = () => {
   return (
     <section id="awards" className="scroll-mt-20">
-      <div className="max-w-screen-xl m-auto xl:px-20 xl:pb-20">
-        <div className="xl:pb-20 w-[70%] m-auto">
+      <div className="max-w-screen-xl m-auto xl:px-20 pb-20">
+        <div className="pb-20 xl:w-[70%] m-auto px-2">
           <Heading
             normal={"Accolades and achievements celebration our"}
             italic={" design excellence"}
           />
         </div>
-        <div className="grid grid-cols-3 justify-between gap-3">
+        <div className="grid xl:grid xl:grid-cols-3 justify-between gap-5 px-4 xl:px-0">
           {awards.map((award) => {
             return (
               <AwardCards

@@ -16,10 +16,10 @@ const Hero = () => {
         before:top-0">
         <div className="absolute bg-transparent backdrop-blur-[70px] w-full h-full"></div>
         <div
-          className="relative flex flex-col h-fit gap-10 items-center justify-center py-40 md:px-8 lg:px-16 xl:px-10 
+          className="relative flex flex-col h-fit gap-10 items-center justify-center px-6 pt-40 pb-20 xl:py-40 md:px-8 lg:px-16 xl:px-10 
        max-w-screen-xl mx-auto"
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-7xl font-semibold text-center">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-semibold text-center">
             Build. Scale. <span className="italic">Dominate.</span>
           </h1>
           <div className="max-w-xl text-center text-md text-zinc-500">
@@ -30,7 +30,7 @@ const Hero = () => {
             />
           </div>
 
-          <div className="flex items-center justify-center gap-5">
+          <div className="flex flex-col xl:flex xl:flex-row items-center justify-center gap-5 ">
             <Button
               color={"bg-[#4928FD]"}
               label={"Get Started"}
@@ -45,7 +45,7 @@ const Hero = () => {
             <Stars noOfStars={5} text={"Trusted by 100+ clients"} />
           </div>
 
-          <div className="text-sm text-zinc-500">
+          <div className="text-lg text-center xl:text-sm text-zinc-500">
             <ParaAndText
               text={"Loved by 100+ big and small brands around the worlds"}
             />
