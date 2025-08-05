@@ -21,8 +21,20 @@ const Navbar = () => {
     }
   }
 
+  function scrollToSection(id) {
+    setActiveNav(id);
+    document.getElementById(id).scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
   return (
     <nav>
+      {/* Nav Link -- scroll
+    Login and Signin pages -- create
+    Contact Form -- submit fix 
+    Error Page -- create */}
+
       {/* web */}
       <div className="hidden xl:block">
         <div className="relative z-100 flex justify-center ">
@@ -32,12 +44,18 @@ const Navbar = () => {
           >
             <div className="flex justify-between items-center w-full">
               <div>
-                <a href="/">
-                  <img
-                    src="https://www.kartavya.io/images/logo/logo.svg"
-                    alt="logo"
-                  />
-                </a>
+                <Link to="/">
+                  <div
+                    onClick={() => {
+                      scrollToSection("hero");
+                    }}
+                  >
+                    <img
+                      src="https://www.kartavya.io/images/logo/logo.svg"
+                      alt="logo"
+                    />
+                  </div>
+                </Link>
               </div>
 
               <div>
@@ -47,7 +65,8 @@ const Navbar = () => {
                 >
                   <li
                     onClick={() => {
-                      handleNav("aboutus");
+                      // handleNav("aboutus");
+                      scrollToSection("aboutus");
                     }}
                     className={`${
                       isActive("aboutus")
@@ -55,24 +74,26 @@ const Navbar = () => {
                         : ""
                     } hover:bg-white px-4 py-2 rounded-full hover:text-black `}
                   >
-                    <a href="/#aboutus">About Us</a>
+                    <Link to="/#aboutus">About Us</Link>
                   </li>
 
                   <li
                     onClick={() => {
-                      handleNav("services");
+                      // handleNav("services");
+                      scrollToSection("service");
                     }}
                     className={`${
-                      isActive("services")
+                      isActive("service")
                         ? "bg-white px-3 py-1 rounded-full text-black"
                         : ""
                     } hover:bg-white px-4 py-2 rounded-full hover:text-black `}
                   >
-                    <a href="/#service">Services</a>
+                    <Link to="/#service">Services</Link>
                   </li>
                   <li
                     onClick={() => {
-                      handleNav("work");
+                      // handleNav("work");
+                      scrollToSection("work");
                     }}
                     className={`${
                       isActive("work")
@@ -80,11 +101,12 @@ const Navbar = () => {
                         : "bg-zinc-200"
                     } hover:bg-white px-4 py-2 rounded-full hover:text-black`}
                   >
-                    <a href="/#work">Work</a>
+                    <Link to="/#work">Work</Link>
                   </li>
                   <li
                     onClick={() => {
-                      handleNav("team");
+                      // handleNav("team");
+                      scrollToSection("team");
                     }}
                     className={`${
                       isActive("team")
@@ -92,11 +114,12 @@ const Navbar = () => {
                         : ""
                     } hover:bg-white px-4 py-2 rounded-full hover:text-black`}
                   >
-                    <a href="/#team">Team</a>
+                    <Link to="/#team">Team</Link>
                   </li>
                   <li
                     onClick={() => {
                       handleNav("pricing");
+                      scrollToSection("pricing");
                     }}
                     className={`${
                       isActive("pricing")
@@ -104,11 +127,12 @@ const Navbar = () => {
                         : ""
                     } hover:bg-white px-4 py-2 rounded-full hover:text-black`}
                   >
-                    <a href="/#pricing">Pricing</a>
+                    <Link to="/#pricing">Pricing</Link>
                   </li>
                   <li
                     onClick={() => {
-                      handleNav("awards");
+                      //handleNav("awards");
+                      scrollToSection("awards");
                     }}
                     className={`${
                       isActive("awards")
@@ -116,11 +140,12 @@ const Navbar = () => {
                         : ""
                     } hover:bg-white px-4 py-2 rounded-full hover:text-black`}
                   >
-                    <a href="/#awards">Awards</a>
+                    <Link to="/#awards">Awards</Link>
                   </li>
                   <li
                     onClick={() => {
-                      handleNav("contact");
+                      //handleNav("contact");
+                      scrollToSection("contact");
                     }}
                     className={`${
                       isActive("contact")
@@ -161,12 +186,20 @@ const Navbar = () => {
               className={`flex items-center justify-between px-3 py-1 w-full`}
             >
               <div>
-                <a href="/">
+                <Link to="/">
+                 <div
+                    onClick={() => {
+                      scrollToSection("hero");
+                    }}
+                  >
                   <img
+                    className=""
                     src="https://www.kartavya.io/images/logo/logo.svg"
                     alt="logo"
                   />
-                </a>
+                  </div>
+                </Link>
+                
               </div>
               <div className="text-xl">
                 <RxHamburgerMenu onClick={toggelMenu} />
@@ -179,7 +212,7 @@ const Navbar = () => {
       <div className="block xl:hidden">
         <div
           className={`${
-            isMenu ? "translate-x-80" : "translate-x-0"
+            isMenu ? "translate-x-150" : "translate-x-0"
           } transition-all duration-300 fixed border h-[100%] w-[80%] right-0 bg-white z-101 px-4 py-5`}
         >
           <div className="flex justify-between text-2xl">
@@ -191,26 +224,54 @@ const Navbar = () => {
 
           <div className="flex flex-col gap-5 px-3 py-12">
             <ul className="flex flex-col gap-3 font-semibold">
-              <li>
-                <Link to="#aboutus">About Us</Link>
+              <li
+                onClick={() => {
+                  scrollToSection("aboutus");
+                }}
+              >
+                <Link to="/#aboutus">About Us</Link>
               </li>
-              <li>
-                <Link to="#service">Service</Link>
+              <li
+                onClick={() => {
+                  scrollToSection("service");
+                }}
+              >
+                <Link to="/#service">Service</Link>
               </li>
-              <li>
+              <li
+                onClick={() => {
+                  scrollToSection("work");
+                }}
+              >
                 <Link to="/#work">Work</Link>
               </li>
-              <li>
+              <li
+                onClick={() => {
+                  scrollToSection("team");
+                }}
+              >
                 <Link to="/#team">Team</Link>
               </li>
-              <li>
+              <li
+                onClick={() => {
+                  scrollToSection("pricing");
+                }}
+              >
                 <Link to="/#pricing">Pricing</Link>
               </li>
-              <li>
+              <li
+                onClick={() => {
+                  scrollToSection("awards");
+                }}
+              >
                 <Link to="/#awards">Awards</Link>
               </li>
-              <li>
-                <Link to="contact">Contact</Link>
+              <li
+                onClick={() => {
+                  scrollToSection("contact");
+                }}
+              >
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
 

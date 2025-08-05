@@ -1,5 +1,5 @@
 import ContactForm from "../../components/ContactForm/ContactForm";
-import FAQ from "../FAQ/FAQ";
+import FAQ from "../../sections/FAQ/FAQ";
 
 const Contact = () => {
   return (
