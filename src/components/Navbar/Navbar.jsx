@@ -22,7 +22,7 @@ const Navbar = () => {
   }
 
   function scrollToSection(id) {
-    setActiveNav(id);
+    // setActiveNav(id);
     document.getElementById(id).scrollIntoView({
       behavior: "smooth",
     });
@@ -30,10 +30,14 @@ const Navbar = () => {
 
   return (
     <nav>
-      {/* Nav Link -- scroll
-    Login and Signin pages -- create
-    Contact Form -- submit fix 
-    Error Page -- create */}
+      {/* 
+        1. Nav Link -- scroll -- DONE
+        2. Login and Signin pages -- pending
+        3. Contact Form -- submit fix -- DONE
+        4. Error Page -- create -- DONE
+        5. Contact form is not highlighting when going through by clicking the button -- pending
+        6. Structure the logic of Navbar and Button component into 'utils' folder for better code reading -- pending
+    */}
 
       {/* web */}
       <div className="hidden xl:block">
@@ -65,7 +69,7 @@ const Navbar = () => {
                 >
                   <li
                     onClick={() => {
-                      // handleNav("aboutus");
+                      handleNav("aboutus");
                       scrollToSection("aboutus");
                     }}
                     className={`${
@@ -79,7 +83,7 @@ const Navbar = () => {
 
                   <li
                     onClick={() => {
-                      // handleNav("services");
+                      handleNav("services");
                       scrollToSection("service");
                     }}
                     className={`${
@@ -92,7 +96,7 @@ const Navbar = () => {
                   </li>
                   <li
                     onClick={() => {
-                      // handleNav("work");
+                      handleNav("work");
                       scrollToSection("work");
                     }}
                     className={`${
@@ -105,7 +109,7 @@ const Navbar = () => {
                   </li>
                   <li
                     onClick={() => {
-                      // handleNav("team");
+                      handleNav("team");
                       scrollToSection("team");
                     }}
                     className={`${
@@ -131,7 +135,7 @@ const Navbar = () => {
                   </li>
                   <li
                     onClick={() => {
-                      //handleNav("awards");
+                      handleNav("awards");
                       scrollToSection("awards");
                     }}
                     className={`${
@@ -144,8 +148,8 @@ const Navbar = () => {
                   </li>
                   <li
                     onClick={() => {
-                      //handleNav("contact");
-                      scrollToSection("contact");
+                      handleNav("contact");
+                      // scrollToSection("contact");
                     }}
                     className={`${
                       isActive("contact")

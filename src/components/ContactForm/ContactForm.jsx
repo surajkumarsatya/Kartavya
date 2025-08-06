@@ -1,8 +1,48 @@
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import Button from "../Button/Button";
 import Heading from "../Heading/Heading";
+import { Formik, Form, Field } from "formik";
+import { ContactFormValidation } from "./ContactFormValidatoin";
+import { useState } from "react";
+
+const initialValues = {
+  firstname: "",
+  lastname: "",
+  email: "",
+  number: "",
+  message: "",
+};
+
+const submitForm = (values) => {
+  console.log("Form submitted:", values);
+};
 
 const ContactForm = () => {
+  //   const { values, handleBlur, handleChange, handleSubmit, errors } = useFormik({
+  //     initialValues: initialValues,
+  //     validationSchema: ContactFormValidation,
+  //     onSubmit: (values) => {
+  //       console.log(values);
+  //     },
+  //   });
+
+  //   console.log(formik);
+
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  function onMouseEnter() {
+    {
+      isHovered ? setIsHovered(false) : setIsHovered(true);
+    }
+  }
+
+  function onMouseLeave() {
+    {
+      isHovered ? setIsHovered(false) : setIsHovered(true);
+    }
+  }
+
   return (
     <div
       className="relative rounded-full h-full top-20 w-full bg-[linear-gradient(90deg,#CDEFFB_0%,#FFFFFF_33.23%,#FFFFFF_65.77%,#FDEECB_100%)] 
@@ -14,154 +54,143 @@ const ContactForm = () => {
           <Heading normal={"Love to hear from you, Get in"} italic={" touch"} />
         </div>
 
-        <div class="flex items-center justify-center w-full max-w-screen-xl m-auto xl:px-20 xl:pb-20">
-          <div class="w-full p-8 space-y-8 bg-white rounded-3xl shadow-xl">
-            <form
-              action="#"
-              class="grid grid-cols-1 gap-y-6 gap-x-8 md:grid-cols-2"
+        <div className="flex items-center justify-center w-full max-w-screen-xl m-auto xl:px-20 xl:pb-20">
+          <div className="w-full p-8 space-y-8 bg-white rounded-3xl shadow-xl">
+            <Formik
+              initialValues={initialValues}
+              validationSchema={ContactFormValidation}
+              onSubmit={submitForm}
             >
-              <div>
-                <label
-                  for="name"
-                  class="block mb-2 text-sm font-medium text-gray-700"
+              {({ errors }) => (
+                <Form
+                  action=""
+                  className="grid grid-cols-1 gap-y-6 gap-x-8 md:grid-cols-2"
                 >
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Enter your name"
-                  class="block w-full px-4 py-3 text-gray-800 placeholder-gray-400 bg-white border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                ></input>
-              </div>
-
-              <div>
-                <label
-                  for="email"
-                  class="block mb-2 text-sm font-medium text-gray-700"
-                >
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  class="block w-full px-4 py-3 text-gray-800 placeholder-gray-400 bg-white border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                ></input>
-              </div>
-
-              <div>
-                <label
-                  for="interest"
-                  class="block mb-2 text-sm font-medium text-gray-700"
-                >
-                  What are you interested in?
-                </label>
-                <div class="relative">
-                  <select
-                    id="interest"
-                    name="interest"
-                    class="block w-full px-4 py-3 text-gray-800 bg-white border border-gray-300 rounded-full appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option>Web Development</option>
-                    <option>UI/UX Design</option>
-                    <option>Mobile App Development</option>
-                    <option>Branding</option>
-                  </select>
-                  <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
-                    <svg
-                      class="w-5 h-5 text-gray-500"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                  <div>
+                    <label
+                      htmlFor="firstname"
+                      className="block mb-2 text-sm font-medium text-gray-700"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      ></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
+                      First Name *
+                    </label>
 
-              <div>
-                <label
-                  for="budget"
-                  class="block mb-2 text-sm font-medium text-gray-700"
-                >
-                  Project budget
-                </label>
-                <div class="relative">
-                  <select
-                    id="budget"
-                    name="budget"
-                    class="block w-full px-4 py-3 text-gray-500 bg-white border border-gray-300 rounded-full appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option disabled selected>
-                      Select your budget
-                    </option>
-                    <option class="text-gray-800" value="<5k">
-                      &lt; $5,000
-                    </option>
-                    <option class="text-gray-800" value="5k-10k">
-                      $5,000 - $10,000
-                    </option>
-                    <option class="text-gray-800" value="10k-20k">
-                      $10,000 - $20,000
-                    </option>
-                    <option class="text-gray-800" value=">20k">
-                      &gt; $20,000
-                    </option>
-                  </select>
-                  <div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
-                    <svg
-                      class="w-5 h-5 text-gray-500"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <Field
+                      type="text"
+                      name="firstname"
+                      className="block w-full px-4 py-3 text-gray-800 placeholder-gray-400 bg-white border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    ></Field>
+
+                    {errors.firstname && (
+                      <small className="capitalize text-red-500">
+                        {errors.firstname}
+                      </small>
+                    )}
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="lastname"
+                      className="block mb-2 text-sm font-medium text-gray-700"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      ></path>
-                    </svg>
+                      Last Name *
+                    </label>
+
+                    <Field
+                      type="text"
+                      name="lastname"
+                      className="block w-full px-4 py-3 text-gray-800 placeholder-gray-400 bg-white border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    ></Field>
+
+                    {errors.lastname && (
+                      <small className="capitalize text-red-500">
+                        {errors.lastname}
+                      </small>
+                    )}
                   </div>
-                </div>
-              </div>
 
-              <div class="md:col-span-2">
-                <label
-                  for="message"
-                  class="block mb-2 text-sm font-medium text-gray-700"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  placeholder="Let us know about your project."
-                  class="block w-full px-4 py-3 text-gray-800 placeholder-gray-400 bg-white border border-gray-300 rounded-xl resize-y focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                ></textarea>
-              </div>
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block mb-2 text-sm font-medium text-gray-700"
+                    >
+                      Email *
+                    </label>
 
-              <Button
-                color={"bg-black"}
-                label={`Let's Collaborate`}
-                fontColor={"text-white"}
-                icon={<BsArrowUpRightCircleFill />}
-                translateLabel={"translate-x-15"}
-                translateIcon={"-translate-x-38"}
-              />
-            </form>
+                    <Field
+                      type="email"
+                      name="email"
+                      className="block w-full px-4 py-3 text-gray-800 placeholder-gray-400 bg-white border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    ></Field>
+
+                    {errors.email && (
+                      <small className="capitalize text-red-500">
+                        {errors.email}
+                      </small>
+                    )}
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="number"
+                      className="block mb-2 text-sm font-medium text-gray-700"
+                    >
+                      Phone Number
+                    </label>
+
+                    <Field
+                      type="tel"
+                      name="number"
+                      className="block w-full px-4 py-3 text-gray-800 placeholder-gray-400 bg-white border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    ></Field>
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <label
+                      htmlFor="message"
+                      className="block mb-2 text-sm font-medium text-gray-700"
+                    >
+                      Message *
+                    </label>
+                
+                    <Field
+                      as="textarea"
+                      rows="5"
+                      name="message"
+                      className="block w-full px-4 py-3 text-gray-800 placeholder-gray-400 bg-white border border-gray-300 rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    ></Field>
+
+                    {errors.message && (
+                      <small className="capitalize text-red-500">
+                        {errors.message}
+                      </small>
+                    )}
+                  </div>
+
+                  <button
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                    type="submit"
+                    className={`bg-black text-white w-fit border-1 px-4 py-2 gap-8 
+                        rounded-full flex items-center hover:cursor-pointer`}
+                  >
+                    <span
+                      className={`${
+                        isHovered ? "translate-x-15" : ""
+                      } transition-transform duration-300`}
+                    >
+                      Let's Collaborate
+                    </span>
+                    <span
+                      className={`${
+                        isHovered ? "-translate-x-38" : ""
+                      } transition-transform duration-300 text-3xl`}
+                    >
+                      <BsArrowUpRightCircleFill />
+                    </span>
+                  </button>
+                </Form>
+              )}
+            </Formik>
           </div>
         </div>
       </div>

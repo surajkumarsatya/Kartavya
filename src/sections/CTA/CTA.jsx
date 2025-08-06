@@ -20,6 +20,7 @@ const CTA = () => {
             interaction.
           </p>
           <Button
+            url={'/contact'}
             color={"bg-black"}
             label={`Let's Collaborate`}
             icon={<BsArrowUpRightCircleFill />}

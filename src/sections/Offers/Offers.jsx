@@ -34,6 +34,7 @@ const Offers = () => {
           </p>
           <div className="flex flex-col items-center gap-5 xl:flex xl:flex-row xl:gap-5">
             <Button
+              url={'/contact'}
               color={"bg-white"}
               label={`Let's Collaborate`}
               fontColor={"text-black"}
@@ -42,6 +43,7 @@ const Offers = () => {
               translateIcon={"-translate-x-38"}
             />
             <Button
+              url={'/#work'}
               color={"bg-black"}
               label={`View Portfolio`}
               fontColor={"text-white"}

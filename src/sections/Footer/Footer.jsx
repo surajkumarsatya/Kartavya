@@ -1,4 +1,14 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
+
+function scrollToSection(id) {
+
+    document.getElementById(id).scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
   return (
     <footer>
       <div className="max-w-screen-xl m-auto xl:px-20 pb-20 px-4">
@@ -42,23 +52,31 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="xl:flex justify-between w-[64%] cursor-pointer grid gap-7">
+          <div className="xl:flex justify-between w-[64%] grid gap-7">
             <ul className="text-sm flex flex-col gap-4 ">
               <li className="font-semibold">Sitemap</li>
               <div className="text-zinc-600 flex flex-col gap-4 ">
-                <li>Contact Us</li>
-                <li>About Us</li>
-                <li>Work</li>
-                <li>Service</li>
-                <li>Pricing</li>
+                <li><Link to='/contact'>Contact Us</Link></li>
+                <li onClick={() => {
+                    scrollToSection('aboutus')
+                }}><Link to='/#aboutus'>About Us</Link></li>
+                <li onClick={() => {
+                    scrollToSection('work')
+                }}><Link to='/#work'>Work</Link></li>
+                <li onClick={() => {
+                    scrollToSection('service')
+                }}><Link to='/#service'>Service</Link></li>
+                <li onClick={() => {
+                    scrollToSection('pricing')
+                }}><Link to='/#pricing'>Pricing</Link></li>
               </div>
             </ul>
 
             <ul className="text-sm flex flex-col gap-4">
               <li className="font-semibold">Other Pages</li>
               <div className="text-zinc-600 flex flex-col gap-4">
-                <li>Terms & Conditions</li>
-                <li>Privacy Policy</li>
+                <li><Link to="/terms-and-conditions">Terms & Conditions</Link></li>
+                <li><Link to="/privacy-policy">Privacy Policy</Link></li>
               </div>
             </ul>
 

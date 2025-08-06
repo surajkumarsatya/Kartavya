@@ -39,6 +39,7 @@ const PricingCard = () => {
                   {'$2500'} <span className="text-lg">{"/month"}</span>
                 </div>
                 <Button
+                  url={'/contact'}
                   color={"bg-white"}
                   icon={<BsArrowUpRightCircleFill />}
                   label={`Let's Collborate`}
@@ -87,6 +88,7 @@ const PricingCard = () => {
                 {'$3800'} <span className="text-lg">{"/month"}</span>
               </div>
               <Button
+                url={'/contact'}
                 color={"bg-white"}
                 icon={<BsArrowUpRightCircleFill />}
                 label={`Let's Collborate`}
