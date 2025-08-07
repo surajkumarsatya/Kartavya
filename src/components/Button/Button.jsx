@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
+import { toggleHoverButton} from "../../constants/HoverButton/HoverButton"
 
 const Button = ({
   color,
@@ -10,28 +11,32 @@ const Button = ({
   translateIcon,
   url,
 }) => {
-  
+
   const [isHovered, setIsHovered] = useState(false);
 
-  function onMouseEnter() {
-    {
-      isHovered ? setIsHovered(false) : setIsHovered(true);
-    }
-  }
+  // function onMouseEnter() {
+  //   {
+  //     isHovered ? setIsHovered(false) : setIsHovered(true);
+  //   }
+  // }
 
-  function onMouseLeave() {
-    {
-      isHovered ? setIsHovered(false) : setIsHovered(true);
-    }
-  }
+  // function onMouseLeave() {
+  //   {
+  //     isHovered ? setIsHovered(false) : setIsHovered(true);
+  //   }
+  // }
 
   return (
     <div>
-      <Link to={url}>
+      <Link smooth to={url}>
         <button
           type="submit"
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
+          onMouseEnter={() => {
+            toggleHoverButton(setIsHovered)
+          }}
+          onMouseLeave={() => {
+            toggleHoverButton(setIsHovered)
+          }}
           className={`${color} ${fontColor} border-1 px-4 py-2 gap-8 
       rounded-full flex items-center justify-between hover:cursor-pointer`}
         >

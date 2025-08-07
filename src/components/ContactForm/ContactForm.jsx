@@ -3,8 +3,10 @@ import Button from "../Button/Button";
 import Heading from "../Heading/Heading";
 import { Formik, Form, Field } from "formik";
 import { ContactFormValidation } from "./ContactFormValidatoin";
+// import { useLocation } from "react-router-dom";
 import { useState } from "react";
-
+import { toggleHoverButton} from "../../constants/HoverButton/HoverButton"
+// onMouseEnter, onMouseLeave,
 const initialValues = {
   firstname: "",
   lastname: "",
@@ -28,20 +30,22 @@ const ContactForm = () => {
 
   //   console.log(formik);
 
-
   const [isHovered, setIsHovered] = useState(false);
 
-  function onMouseEnter() {
-    {
-      isHovered ? setIsHovered(false) : setIsHovered(true);
-    }
-  }
+//   function onMouseEnter() {
+//     {
+//       isHovered ? setIsHovered(false) : setIsHovered(true);
+//     }
+//   }
 
-  function onMouseLeave() {
-    {
-      isHovered ? setIsHovered(false) : setIsHovered(true);
-    }
-  }
+//   function onMouseLeave() {
+//     {
+//       isHovered ? setIsHovered(false) : setIsHovered(true);
+//     }
+//   }
+
+//   const location = useLocation();
+//   console.log(location);
 
   return (
     <div
@@ -151,7 +155,7 @@ const ContactForm = () => {
                     >
                       Message *
                     </label>
-                
+
                     <Field
                       as="textarea"
                       rows="5"
@@ -167,8 +171,12 @@ const ContactForm = () => {
                   </div>
 
                   <button
-                    onMouseEnter={onMouseEnter}
-                    onMouseLeave={onMouseLeave}
+                    onMouseEnter={() => {
+                        toggleHoverButton(setIsHovered)
+                    }}
+                    onMouseLeave={() => {
+                        toggleHoverButton(setIsHovered)
+                    }}
                     type="submit"
                     className={`bg-black text-white w-fit border-1 px-4 py-2 gap-8 
                         rounded-full flex items-center hover:cursor-pointer`}

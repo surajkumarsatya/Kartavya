@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
+import { footerLinks } from "../../constants/NavbarLinks/NavbarLinks";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Footer = () => {
+  // function scrollToSection(id) {
 
-function scrollToSection(id) {
-
-    document.getElementById(id).scrollIntoView({
-      behavior: "smooth",
-    });
-  }
+  //     document.getElementById(id).scrollIntoView({
+  //       behavior: "smooth",
+  //     });
+  //   }
 
   return (
     <footer>
@@ -56,7 +56,17 @@ function scrollToSection(id) {
             <ul className="text-sm flex flex-col gap-4 ">
               <li className="font-semibold">Sitemap</li>
               <div className="text-zinc-600 flex flex-col gap-4 ">
-                <li><Link to='/contact'>Contact Us</Link></li>
+                {footerLinks.map((link) => {
+                  return (
+                    <li key={link.name}>
+                      <Link  smooth to={link.path}>
+                        {link.name}
+                      </Link>
+                    </li>
+                  );
+                })}
+
+                {/* <li><Link to='/contact'>Contact Us</Link></li>
                 <li onClick={() => {
                     scrollToSection('aboutus')
                 }}><Link to='/#aboutus'>About Us</Link></li>
@@ -68,15 +78,19 @@ function scrollToSection(id) {
                 }}><Link to='/#service'>Service</Link></li>
                 <li onClick={() => {
                     scrollToSection('pricing')
-                }}><Link to='/#pricing'>Pricing</Link></li>
+                }}><Link to='/#pricing'>Pricing</Link></li> */}
               </div>
             </ul>
 
             <ul className="text-sm flex flex-col gap-4">
               <li className="font-semibold">Other Pages</li>
               <div className="text-zinc-600 flex flex-col gap-4">
-                <li><Link to="/terms-and-conditions">Terms & Conditions</Link></li>
-                <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                <li>
+                  <Link to="/terms-and-conditions">Terms & Conditions</Link>
+                </li>
+                <li>
+                  <Link to="/privacy-policy">Privacy Policy</Link>
+                </li>
               </div>
             </ul>
 
@@ -84,7 +98,8 @@ function scrollToSection(id) {
               <li className="font-semibold">Contact Details</li>
               <div className="text-zinc-600 flex flex-col gap-4">
                 <li>
-                  71-75 Shelton Street, Covent Garden, <br /> London, United Kingdom.
+                  71-75 Shelton Street, Covent Garden, <br /> London, United
+                  Kingdom.
                 </li>
                 <li>mail@kartavya.io</li>
                 <li>+91 7999994656</li>

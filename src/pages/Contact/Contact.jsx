@@ -7,7 +7,9 @@ const Contact = () => {
       <div className="max-w-screen-xl m-auto">
         <ContactForm />
       </div>
-      <FAQ />
+      <div className="pb-20">
+        <FAQ />
+      </div>
     </section>
   );
 };
