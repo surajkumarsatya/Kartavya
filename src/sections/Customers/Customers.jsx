@@ -3,15 +3,15 @@ import Heading from "../../components/Heading/Heading";
 const Customers = () => {
   return (
     <section>
-    <div className="max-w-screen-xl m-auto xl:px-20 xl:py-20 px-4 pb-20">
-        <div className="xl:w-[60%] mx-auto pb-20">
+    <div className="max-w-screen-xl m-auto lg:px-20 lg:py-20 px-4 pb-20">
+        <div className="lg:w-[60%] mx-auto pb-20">
             <Heading normal={'What our satisfied customers are saying'} italic={' about us'}/>
         </div>
       
-      <div className="flex flex-col gap-5 xl:grid xl:grid-cols-3 xl:grid-rows-2 xl:gap-4 ">
+      <div className="flex flex-col gap-5 lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:gap-4 ">
         <div
           className="border col-span-2 row-span-1 bg-[url('https://www.kartavya.io/images/home/customerStories/customer_bg_img.jpg')]
-        xl:bg-cover bg-no-repeat bg-center bg-cover rounded-3xl xl:h-[100%] h-125"
+        lg:bg-cover bg-no-repeat bg-center bg-cover rounded-3xl lg:h-[100%] h-125"
         >
           <div className="text-white p-8 h-[100%] flex flex-col items-start justify-between">
             <div>
@@ -32,7 +32,7 @@ const Customers = () => {
         </div>
 
         <div className="col-span-1 row-span-1 bg-[#F6E683] rounded-3xl ">
-          <div className="text-white p-8 h-100 xl:h-[100%] flex flex-col items-start justify-between">
+          <div className="text-white p-8 h-100 lg:h-[100%] flex flex-col items-start justify-between">
             <div>
               <p className="uppercase text-sm text-zinc-600">Facts & numbers</p>
             </div>
@@ -46,7 +46,7 @@ const Customers = () => {
         </div>
 
         <div className="col-span-1 row-span-1 bg-[#1B1D1E] rounded-3xl ">
-          <div className="text-white p-8 h-120 xl:h-[100%] flex flex-col items-start justify-between">
+          <div className="text-white p-8 h-120 lg:h-[100%] flex flex-col items-start justify-between">
             <div>
               <p className="uppercase text-sm text-zinc-400 font-semibold pb-5">
                 Customer stories
@@ -66,7 +66,7 @@ const Customers = () => {
         </div>
 
         <div className="col-span-2 row-span-1 bg-[#F3F3F4] rounded-3xl">
-          <div className="text-white p-8 h-100 xl:h-[100%] flex flex-col items-start justify-between">
+          <div className="text-white p-8 h-100 lg:h-[100%] flex flex-col items-start justify-between">
             <div>
               <p className="uppercase text-sm text-zinc-600 font-semibold pb-5">
                 Customer stories

@@ -5,8 +5,8 @@ import Heading from "../../components/Heading/Heading";
 const FAQ = () => {
   return (
     <section>
-      <div className="max-w-screen-xl m-auto xl:px-20 pt-20 pb-18 p-4">
-        <div className="pb-20 xl:w-[40%] m-auto">
+      <div className="max-w-screen-xl m-auto lg:px-20 pt-20 pb-18 p-4">
+        <div className="pb-20 lg:w-[40%] m-auto">
           <Heading normal={"Got questions? We've got"} italic={" answers"} />
         </div>
         <div>

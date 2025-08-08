@@ -16,8 +16,8 @@ const ErrorPage = () => {
         before:top-0">
        
       <div className="absolute bg-transparent backdrop-blur-[70px] w-full h-full"></div>
-      <div className="relative flex flex-col h-fit items-center justify-center px-4 py-20 xl:p-0">
-        <div className="xl:w-[50%] flex flex-col items-center justify-center gap-8 py-10 px-2">
+      <div className="relative flex flex-col h-fit items-center justify-center px-4 py-20 lg:p-0">
+        <div className="lg:w-[50%] flex flex-col items-center justify-center gap-8 py-10 px-2">
           <img src="https://www.kartavya.io/images/Notfound/notfound.png" alt="404" />
           <Heading
             normal={"Oops! The page you are looking for"}

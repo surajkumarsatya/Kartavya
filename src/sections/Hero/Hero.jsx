@@ -30,7 +30,7 @@ const Hero = () => {
             />
           </div>
 
-          <div className="flex flex-col xl:flex xl:flex-row items-center justify-center gap-5 ">
+          <div className="flex flex-col lg:flex lg:flex-row items-center justify-center gap-5 ">
             <Button
               url={'/contact'}
               color={"bg-[#4928FD]"}

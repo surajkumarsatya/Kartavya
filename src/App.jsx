@@ -7,6 +7,7 @@ import Error from "./pages/Error/Error";
 import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 
+
 function App() {
   const router = createBrowserRouter([
     {

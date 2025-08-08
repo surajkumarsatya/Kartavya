@@ -8,8 +8,8 @@ const Privacy = () => {
     >
       <div className="absolute bg-transparent backdrop-blur-[70px] w-full h-full"></div>
       <div className="relative flex flex-col h-fit items-center justify-center 
-       xl:mb-20 max-w-screen-xl m-auto xl:px-20 xl:py-20 px-4 py-20">
-        <div className="pb-5 xl:pb-5">
+       lg:mb-20 max-w-screen-xl m-auto lg:px-20 lg:py-20 px-4 py-20">
+        <div className="pb-5 lg:pb-5">
           <Heading normal={"Privacy Policy"} italic={""} />
         </div>
 

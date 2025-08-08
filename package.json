@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@clerk/clerk-react": "^5.39.0",
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.1.11",
     "formik": "^2.4.6",
     "react": "^19.1.0",

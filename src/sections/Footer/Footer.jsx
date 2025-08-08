@@ -11,9 +11,9 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="max-w-screen-xl m-auto xl:px-20 pb-20 px-4">
-        <div className="xl:flex justify-between grid gap-8">
-          <div className="xl:w-[32%]">
+      <div className="max-w-screen-xl m-auto lg:px-20 pb-20 px-4">
+        <div className="lg:flex justify-between grid gap-8">
+          <div className="lg:w-[32%]">
             <ul className="text-sm flex flex-col gap-5">
               <li>
                 <img
@@ -52,7 +52,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="xl:flex justify-between w-[64%] grid gap-7">
+          <div className="lg:flex justify-between w-[64%] grid gap-7">
             <ul className="text-sm flex flex-col gap-4 ">
               <li className="font-semibold">Sitemap</li>
               <div className="text-zinc-600 flex flex-col gap-4 ">

@@ -4,14 +4,14 @@ import TeamMemberCards from "../../components/TeamMemberCards/TeamMemberCards";
 const TeamMembers = () => {
   return (
     <section id="team" className="scroll-mt-20">
-      <div className="px-4 pb-20 xl:px-20 xl:pb-0 max-w-screen-xl m-auto">
-        <div className="mx-auto text-center xl:w-[50%]">
+      <div className="px-4 pb-20 lg:px-20 lg:pb-0 max-w-screen-xl m-auto">
+        <div className="mx-auto text-center lg:w-[50%]">
           <Heading
             normal={"Meet the creative minds behind"}
             italic={" our success"}
           />
         </div>
-        <div className="xl:flex px-4 justify-between gap-5">
+        <div className="lg:flex px-4 justify-between gap-5">
           {teamMembers.map((team) => {
             return (
               <TeamMemberCards

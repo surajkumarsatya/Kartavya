@@ -10,8 +10,9 @@ const Stats = () => {
   return (
     <section>
       <div id="aboutus" >
-        <div className="px-4 flex flex-col h-full bg-white items-center justify-center gap-10 pb-20 lg:py-20 md:px-8 lg:px-16 xl:px-10 max-w-screen-xl m-auto">
-        <div className="text-sm xl:text-3xl mx-auto text-center font-semibold lg:px-[0vw]">
+        <div className="px-4 flex flex-col h-full bg-white items-center justify-center gap-10 pb-20 lg:py-20 md:px-8 lg:px-16 
+         max-w-screen-xl m-auto">
+        <div className="text-sm lg:text-3xl mx-auto text-center font-semibold lg:px-[0vw]">
             <Heading
           normal={
             "Crafting exceptional, well experienced & technology driven strategies to drive impactful results with"
@@ -20,7 +21,7 @@ const Stats = () => {
         />
         </div>
 
-        <div className="flex flex-col items-center xl:flex xl:flex-row gap-4">
+        <div className="flex flex-col items-center lg:flex lg:flex-row gap-4">
           <Labels
             bgColor={"bg-purple-200"}
             fontColor={"text-purple-400"}
@@ -44,15 +45,15 @@ const Stats = () => {
           />
         </div>
 
-        <div className="flex flex-col gap-10 xl:gap-0 text-2xl xl:flex xl:flex-row xl:items-center justify-between mt-10 xl:mt-20">
-         <div className="xl:border-r xl:p-5 xl:pr-10">
+        <div className="flex flex-col gap-10 lg:gap-0 text-2xl lg:flex lg:flex-row lg:items-center justify-between mt-10 lg:mt-20">
+         <div className="lg:border-r lg:p-5 lg:pr-10">
             <StatsCards
             plusIcon={<FaPlus />}
             number={50}
             desc={"Total Projects Completed"}
           />
          </div>
-         <div className="xl:border-r p-5 pr-10">
+         <div className="lg:border-r p-5 pr-10">
             <StatsCards
             plusIcon={<FaPlus />}
             number={15}

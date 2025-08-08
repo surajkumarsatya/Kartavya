@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import { toggleHoverButton} from "../../constants/HoverButton/HoverButton"
+import { toggleHoverButton} from "../../utils/HoverButton/HoverButton"
 
 const Button = ({
   color,
