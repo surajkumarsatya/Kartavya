@@ -17,11 +17,11 @@ import {
 
 const Navbar = () => {
   const userData = useUser();
-  console.log(userData?.user?.firstName);
+ 
 
   const [isMenu, setIsMenu] = useState(true);
   const location = useLocation();
-  console.log("location", location);
+ 
 
   return (
     <nav>
@@ -32,9 +32,9 @@ const Navbar = () => {
         4. Error Page -- create -- DONE
         5. Contact form is not highlighting when going through by clicking the button -- DONE
         6. Structure the logic of Navbar and Button component into 'utils' folder for better code reading -- pending -- DONE
-        7. When the path changes, it should take me to the top of the page -- pending
+        7. When the path changes, it should take me to the top of the page -- pending -- DONE
         8. When the Contact is submitted, it should send email to me -- pending -- DONE (using Emailjs)
-        9. Hide the .env file -- pending
+        9. Hide the .env file -- pending -- DONE (in Vercel)
     */}
 
       {/* Desktop Navbar */}
@@ -53,7 +53,7 @@ const Navbar = () => {
               {/* Nav Links */}
               <ul className="flex items-center justify-between gap-1 bg-zinc-200 rounded-full text-zinc-600 text-sm font-semibold px-2 py-1">
                 {navLinks.map((link) => (
-                  <Link smooth to={link.path}>
+                  <Link key={link.name} smooth to={link.path}>
                   <li
                     key={link.name}
                     className={`${
@@ -115,7 +115,7 @@ const Navbar = () => {
         <div className="relative z-100 flex justify-center">
           <div className="fixed flex justify-between bg-white shadow-xl w-[90%] mt-3 rounded-full lg:py-0 xl:py-2 xl:px-4 max-w-screen-xl m-auto">
             <div className="flex items-center justify-between px-3 py-1 w-full">
-              <Link smooth to="/#hero">
+              <Link smooth to="/">
                 <img
                   src="https://www.kartavya.io/images/logo/logo.svg"
                   alt="logo"

@@ -6,9 +6,12 @@ import Contact from "./pages/Contact/Contact";
 import Error from "./pages/Error/Error";
 import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+
 
 
 function App() {
+  
   const router = createBrowserRouter([
     {
       path: "/",

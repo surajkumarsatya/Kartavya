@@ -14,7 +14,7 @@ const initialValues = {
   firstname: "",
   lastname: "",
   email: "",
-  number: "",
+  subject: "",
   message: "",
 };
 
@@ -161,9 +161,9 @@ const ContactForm = () => {
                       className="block w-full px-4 py-3 text-gray-800 placeholder-gray-400 bg-white border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     ></Field>
 
-                    {errors.lastname && (
+                    {errors.subject && (
                       <small className="capitalize text-red-500">
-                        {errors.lastname}
+                        {errors.subject}
                       </small>
                     )}
                   </div>
